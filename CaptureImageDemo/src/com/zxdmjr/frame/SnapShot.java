@@ -202,7 +202,7 @@ public class SnapShot extends javax.swing.JFrame {
           SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyyMMMddHHmmss");
           String fName = simpleFormat.format(new Date())+".jpg";
           SimpleDateFormat simpleFormatFolder = new SimpleDateFormat("yyyyMMMdd");
-          String folderName = "C:\\Users\\pavel\\Desktop\\Photos\\"+simpleFormatFolder.format(new Date());
+          String folderName = System.getProperty("user.home")+"\\Desktop\\Photos\\"+simpleFormatFolder.format(new Date());
           
           File folder = new File(folderName);
           if(!folder.exists()){
